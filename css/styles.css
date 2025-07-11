@@ -10998,12 +10998,17 @@ p.lead {
   }
 
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    width: 10rem; /* Ajusta a largura da imagem para 80% do container */
+    max-width: 10rem; /* Limita o tamanho máximo, mas não obriga um valor fixo */
+    height: auto; /* Mantém a proporção */
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
-    width: 100%; /* Garante que a imagem use a largura do container */
-    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
-  }  
+  }
+
+  @media (max-width: 768px) {
+    #sideNav .navbar-brand .img-profile {
+      max-width: 8rem; /* Ajusta o tamanho máximo da imagem em telas pequenas */
+    }
+  }
   
   #sideNav .navbar-collapse {
     display: flex;
